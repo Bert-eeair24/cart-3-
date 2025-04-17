@@ -5,7 +5,6 @@ public class OnlineShoppingCart {
         Scanner scanner = new Scanner(System.in);
         ShoppingCart cart = new ShoppingCart();
 
-        // Загрузка сохраненной корзины
         cart.loadFromFile();
 
         while (true) {
@@ -18,24 +17,39 @@ public class OnlineShoppingCart {
             System.out.print("Выберите действие: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Очистка буфера
+            scanner.nextLine();
 
             switch (choice) {
-                case 1: // Добавить товар
+                case 1:
                     System.out.print("Введите название товара: ");
                     String name = scanner.nextLine();
-                    System.out.print("Введите цену: ");
-                    double price = scanner.nextDouble();
+
+                    double price = 0;
+                    boolean validPrice = false;
+                    while (!validPrice) {
+                        System.out.print("Введите цену: ");
+                        try {
+                            price = Double.parseDouble(scanner.nextLine());
+                            if (price > 0) {
+                                validPrice = true;
+                            } else {
+                                System.out.println("Ошибка: Цена должна быть положительным числом. Попробуйте снова.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Ошибка: Введите корректное число для цены. Попробуйте снова.");
+                        }
+                    }
+
                     System.out.print("Введите количество: ");
                     int quantity = scanner.nextInt();
                     cart.addItem(new Main(name, price, quantity));
                     break;
 
-                case 2: // Просмотреть корзину
+                case 2:
                     cart.viewCart();
                     break;
 
-                case 3: // Изменить количество
+                case 3:
                     cart.viewCart();
                     System.out.print("Введите номер товара для изменения: ");
                     int updateIndex = scanner.nextInt() - 1;
@@ -44,14 +58,14 @@ public class OnlineShoppingCart {
                     cart.updateItem(updateIndex, newQuantity);
                     break;
 
-                case 4: // Удалить товар
+                case 4:
                     cart.viewCart();
                     System.out.print("Введите номер товара для удаления: ");
                     int removeIndex = scanner.nextInt() - 1;
                     cart.removeItem(removeIndex);
                     break;
 
-                case 5: // Сохранить и выйти
+                case 5:
                     cart.saveToFile();
                     System.out.println("Спасибо за использование нашего сервиса!");
                     scanner.close();
