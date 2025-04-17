@@ -49,7 +49,7 @@ class ShoppingCart {
 
     public void viewCart() {
         if (items.isEmpty()) {
-            System.out.println("Корзина пуста.");
+            System.out.println("Корзина пуста");
             return;
         }
 
@@ -67,9 +67,9 @@ class ShoppingCart {
     public void updateItem(int index, int newQuantity) {
         if (index >= 0 && index < items.size()) {
             items.get(index).setQuantity(newQuantity);
-            System.out.println("Количество обновлено.");
+            System.out.println("Количество обновлено");
         } else {
-            System.out.println("Неверный номер товара.");
+            System.out.println("Неверный номер товара");
         }
     }
 
@@ -77,9 +77,9 @@ class ShoppingCart {
     public void removeItem(int index) {
         if (index >= 0 && index < items.size()) {
             items.remove(index);
-            System.out.println("Товар удален из корзины.");
+            System.out.println("Товар удален из корзины");
         } else {
-            System.out.println("Неверный номер товара.");
+            System.out.println("Неверный номер товара");
         }
     }
 
@@ -90,7 +90,7 @@ class ShoppingCart {
             for (Main item : items) {
                 writer.println(item.toCSV());
             }
-            System.out.println("Корзина сохранена в файл.");
+            System.out.println("Корзина сохранена в файл");
         } catch (IOException e) {
             System.out.println("Ошибка при сохранении корзины: " + e.getMessage());
         }
@@ -107,7 +107,7 @@ class ShoppingCart {
             while ((line = reader.readLine()) != null) {
                 items.add(Main.fromCSV(line));
             }
-            System.out.println("Корзина загружена из файла.");
+            System.out.println("Корзина загружена из файла");
         } catch (IOException e) {
             System.out.println("Ошибка при загрузке корзины: " + e.getMessage());
         }

@@ -40,8 +40,20 @@ public class OnlineShoppingCart {
                         }
                     }
 
-                    System.out.print("Введите количество: ");
-                    int quantity = scanner.nextInt();
+                    int quantity = -1;
+                    while (quantity <= 0) {
+                        System.out.print("Введите количество: ");
+                        if (scanner.hasNextInt()) {
+                            quantity = scanner.nextInt();
+                            if (quantity <= 0) {
+                                System.out.println("Ошибка: количество не может быть отрицательным.");
+                            }
+                        } else {
+                            System.out.println("Ошибка: введите целое число.");
+                            scanner.next(); // очистка некорректного ввода
+                        }
+                    }
+
                     cart.addItem(new Main(name, price, quantity));
                     break;
 
@@ -53,8 +65,21 @@ public class OnlineShoppingCart {
                     cart.viewCart();
                     System.out.print("Введите номер товара для изменения: ");
                     int updateIndex = scanner.nextInt() - 1;
-                    System.out.print("Введите новое количество: ");
-                    int newQuantity = scanner.nextInt();
+
+                    int newQuantity = -1;
+                    while (newQuantity < 0) {
+                        System.out.print("Введите новое количество: ");
+                        if (scanner.hasNextInt()) {
+                            newQuantity = scanner.nextInt();
+                            if (newQuantity < 0) {
+                                System.out.println("Ошибка: количество не может быть отрицательным.");
+                            }
+                        } else {
+                            System.out.println("Ошибка: введите целое число.");
+                            scanner.next(); // очистка некорректного ввода
+                        }
+                    }
+
                     cart.updateItem(updateIndex, newQuantity);
                     break;
 
