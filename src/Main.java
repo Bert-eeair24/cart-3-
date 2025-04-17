@@ -43,7 +43,7 @@ class ShoppingCart {
 
     public void addItem(Main product) {
         items.add(product);
-        System.out.println("Товар добавлен в корзину.");
+        System.out.println("товар добавлен в корзину.");
     }
 
 
