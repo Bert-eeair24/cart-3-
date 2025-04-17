@@ -3,6 +3,9 @@
 **Student:** Алмасбеков Урмат  
 **Language:** Java (Console-based)
 
+**![image](https://github.com/user-attachments/assets/49652491-3264-4f7e-859f-6d4efd08e22e)**
+
+
 ---
 
 ## 📄 Description
@@ -11,7 +14,7 @@
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Create a functional shopping cart system using Java  
 - Implement OOP principles (encapsulation, composition)  
@@ -21,7 +24,7 @@
 
 ---
 
-## ✅ Project Requirements
+##  Project Requirements
 
 1. Add products to the cart  
 2. View cart and display all items  
@@ -36,9 +39,9 @@
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
-### 🔑 Key Classes & Methods
+###  Key Classes & Methods
 
 - **`Product`**  
   Represents a product with:
@@ -56,11 +59,11 @@
 - **`OnlineShoppingCart`**  
   Main class that handles the menu and user interaction via `Scanner`.
 
-### 🧮 Data Structures
+###  Data Structures
 
 - `ArrayList<Product>` is used to store and manage the products in the cart.
 
-### ⚠️ Challenges Faced
+###  Challenges Faced
 
 - Adjusting user inputs from 1-based to 0-based indexing  
 - Validating inputs to prevent errors  
@@ -68,7 +71,7 @@
 
 ---
 
-## 🧪 Test Cases
+##  Test Cases
 
 ### 🔹 Add and View Cart
 
@@ -118,7 +121,7 @@ Cart is empty
 
 ---
 
-## 💾 Files
+##  Files
 
 - `OnlineShoppingCart.java` — Main file containing all logic and classes  
 - Current version uses console I/O only  
@@ -126,7 +129,7 @@ Cart is empty
 
 ---
 
-## 💻 Code Quality
+##  Code Quality
 
 - ✅ **Valid:** Compiles and runs without errors  
 - ✅ **Clean:** Organized with clear class structure  
@@ -134,12 +137,14 @@ Cart is empty
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 > _Demonstration of all required functionalities:_
 
 ![Add Product](https://github.com/user-attachments/assets/679ff775-d299-4626-85d4-0aba0a2c940d)  
 ![View Cart](https://github.com/user-attachments/assets/0fb80f3e-d850-4b97-a1ac-4ccdace17681)
+![image](https://github.com/user-attachments/assets/8fbe8593-87fb-4caa-894d-9dd5d33811a3)
+![image](https://github.com/user-attachments/assets/a5f17eae-85aa-41e6-a17d-32841fac6bcd)
 
 - 🟢 Product added  
 - 🟢 Cart viewed  
@@ -150,5 +155,5 @@ Cart is empty
 
 ---
 
-🛠️ _This project is a part of Java coursework, demonstrating practical implementation of basic OOP principles and dynamic data handling._
+🛠 _This project is a part of Java coursework, demonstrating practical implementation of basic OOP principles and dynamic data handling._
 
