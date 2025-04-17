@@ -3,8 +3,8 @@
 **Student:** Алмасбеков Урмат  
 **Language:** Java (Console-based)
 
-**![image](https://github.com/user-attachments/assets/49652491-3264-4f7e-859f-6d4efd08e22e)**
-
+**presentation**
+https://drive.google.com/file/d/1xezQPLbO9A6hWUSI8f6kXZFAzxPOZFUP/view?usp=drive_link
 
 ---
 
@@ -155,5 +155,5 @@ Cart is empty
 
 ---
 
-🛠 _This project is a part of Java coursework, demonstrating practical implementation of basic OOP principles and dynamic data handling._
+ _This project is a part of Java coursework, demonstrating practical implementation of basic OOP principles and dynamic data handling._
 
