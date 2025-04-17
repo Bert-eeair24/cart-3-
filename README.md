@@ -1,4 +1,4 @@
-# 🛒 Online Shopping Cart  
+#  Online Shopping Cart  
 
 **Author**: [Алмасбеков Урмат]  
 
@@ -38,26 +38,26 @@ The project demonstrates **object-oriented programming (OOP)** principles and ba
 
 ##  Documentation  
 
-### 🔹 Key Classes & Methods  
+###  Key Classes & Methods  
 | Class          | Methods & Description |
 |----------------|-----------------------|
 | **`Product`**  | Represents a product with `name`, `price`, and `quantity`. |
 | **`ShoppingCart`** | Manages cart operations: <br> • `addItem(Product product)` <br> • `viewCart()` <br> • `updateItem(int index, int newQuantity)` <br> • `removeItem(int index)` |
 | **`OnlineShoppingCart`** (Main) | Handles user interactions via `Scanner`. |
 
-### 🔹 Data Structures  
+###  Data Structures  
 - **`ArrayList<Product>`** – Stores and manages products dynamically.  
 
-### ⚠ Challenges Faced  
+###  Challenges Faced  
 - Converting **1-based user input** to **0-based indexing** in the code.  
 - Ensuring **input validation** for a smooth user experience.  
 - Keeping the interface **clear and intuitive**.  
 
 ---
 
-## 🧪Test Cases & Outputs  
+## Test Cases & Outputs  
 
-### 🔹 Test Case 1: Add and View Cart  
+###  Test Case 1: Add and View Cart  
 **Input:**  
 Phone
 599.99
@@ -82,7 +82,7 @@ l
 599.99x2(Total:1199.98)
 Total: $1199.98
 
-### 🔹 Test Case 2: Update Quantity  
+###  Test Case 2: Update Quantity  
 **Input:**  
 3
 1
@@ -90,14 +90,14 @@ Total: $1199.98
 **Expected Output:**  
 Quantity updated.
 
-### 🔹 Test Case 3: Remove Item  
+###  Test Case 3: Remove Item  
 **Input:**  
 4
 1
 **Expected Output:**  
 Product removed from cart.
 
-### 🔹 Test Case 4: View Empty Cart  
+###  Test Case 4: View Empty Cart  
 **Input:**  
 2
 **Expected Output:**  
@@ -105,13 +105,13 @@ Cart is empty.
 
 ---
 
-## 💾 Files  
+## Files  
 - **`OnlineShoppingCart.java`** – Main file containing all classes and logic.  
 - *(Future extension: File storage for saving/loading cart data.)*  
 
 ---
 
-## 🖥️ Screenshots  
+##  Screenshots  
 
 | Action | Screenshot |
 |--------|------------|
@@ -123,7 +123,7 @@ Cart is empty.
 
 ---
 
-## ✅ Code Quality  
+##  Code Quality  
 ✔ **Valid** – Compiles and runs without errors.  
 ✔ **Clean** – Well-organized into classes/methods.  
 ✔ **Minimal Comments** – Self-explanatory code.  
