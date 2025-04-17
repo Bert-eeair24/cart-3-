@@ -1,3 +1,6 @@
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 class Main {
@@ -19,6 +22,21 @@ class Main {
     public String toString() {
         return String.format("%s - $%.2f x %d (Total: $%.2f)",
                 name, price, quantity, price * quantity);
+    }
+
+    // Для сохранения в CSV (добавить в класс Product)
+    public String toCSV() {
+        return String.format("%s,%.2f,%d", name, price, quantity);
+    }
+
+    // Для загрузки из CSV (добавить в класс Product)
+    public static Main fromCSV(String csvLine) {
+        String[] parts = csvLine.split(",");
+        return new Main(
+                parts[0],
+                Double.parseDouble(parts[1]),
+                Integer.parseInt(parts[2])
+        );
     }
 }
 class ShoppingCart {
@@ -64,6 +82,39 @@ class ShoppingCart {
             System.out.println("Товар удален из корзины.");
         } else {
             System.out.println("Неверный номер товара.");
+        }
+    }
+
+    // Константа с именем файла (добавить в начало класса)
+    private static final String CART_FILE = "products.csv";
+
+    // Метод сохранения (добавить в класс ShoppingCart)
+    public void saveToFile() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(CART_FILE))) {
+            for (Main item : items) {
+                writer.println(item.toCSV());
+            }
+            System.out.println("Корзина сохранена в файл.");
+        } catch (IOException e) {
+            System.out.println("Ошибка при сохранении корзины: " + e.getMessage());
+        }
+    }
+
+    // Метод загрузки (добавить в класс ShoppingCart)
+    public void loadFromFile() {
+        items.clear();
+        if (!Files.exists(Paths.get(CART_FILE))) {
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(CART_FILE))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                items.add(Main.fromCSV(line));
+            }
+            System.out.println("Корзина загружена из файла.");
+        } catch (IOException e) {
+            System.out.println("Ошибка при загрузке корзины: " + e.getMessage());
         }
     }
 }
