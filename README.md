@@ -1,124 +1,156 @@
-Project Overview
-Project Title: Online Shopping Cart Management System
-Student Name: Almasbekov Urmat
-Project Description: A Java console application that implements CRUD operations for managing an online shopping cart, allowing users to add, view, update, and remove items from their cart.
+🛒 Online Shopping Cart
+👨‍💻 Student Name
+[Алмасбеков Урмат]
 
-Project Objectives
-Implement core CRUD (Create, Read, Update, Delete) functionality
+📄 Description
+Online Shopping Cart is a console-based Java application that simulates an online shopping experience. Users can add products to a cart, view cart contents, update product quantities, and remove products. The project showcases object-oriented programming principles and basic data handling through user input and structured output.
 
-Provide a user-friendly command line interface
+🎯 Objectives
+Create a functional shopping cart using Java.
 
-Demonstrate proper data management techniques
+Implement object-oriented programming concepts (encapsulation, composition).
 
-Showcase Java programming fundamentals
+Enable dynamic management of products using data structures.
 
-Key Features
-Add items to shopping cart (name, price, quantity)
+Provide a simple and user-friendly interface for interaction.
 
-View cart contents with total calculation
+Validate and handle user input effectively.
 
-Update item quantities
+📋 Project Requirement List (5 points)
+Add products to the cart.
 
-Remove items from cart
+View the cart and list all products.
 
-Simple console-based user interface
+Display total price of items in the cart.
 
-Requirements Implemented
-Complete CRUD operations implementation
+Update quantity of a selected product.
 
-Command line interface with menu system
+Remove a product from the cart.
 
-Basic input validation
+Handle empty cart scenarios.
 
-Modular code structure (separate Product and ShoppingCart classes)
+Provide a menu-driven user interface.
 
-Clear console output formatting
+Prevent invalid inputs or actions.
 
-Proper error handling for invalid inputs
+Use of ArrayList for dynamic storage.
 
-Intuitive user workflow
+Utilize OOP concepts (Product, ShoppingCart classes).
 
-Real-time cart total calculation
+📚 Documentation (10 points)
+🔧 Key Classes & Methods:
+Product – Represents a product with a name, price, and quantity.
 
-Sequential item numbering
+ShoppingCart – Maintains a list of products and supports:
 
-Clean program exit functionality
+addItem(Product product)
 
-How to Use
-Clone the repository or download the source files
+viewCart()
 
-Compile the Java files:
+updateItem(int index, int newQuantity)
 
-Copy
-javac OnlineShoppingCart.java
-Run the application:
+removeItem(int index)
 
-Copy
-java OnlineShoppingCart
-Follow the on-screen menu prompts:
+OnlineShoppingCart – The main class handling the menu and user interactions via Scanner.
 
-Press 1 to add items
+🧠 Data Structures:
+ArrayList<Product> is used to store and manage the products dynamically.
 
-Press 2 to view your cart
+⚠️ Challenges Faced:
+Adjusting 1-based user input to 0-based indexing in code.
 
-Press 3 to update quantities
+Ensuring safe and consistent user input validation.
 
-Press 4 to remove items
+Keeping the interface clear and concise for non-technical users.
 
-Press 5 to exit
+✅ Test Cases and Outputs (5 points)
+🔹 Test Case 1: Add and View Cart
+Input:
 
-Code Structure
-Product.java - Product class (model)
+Копировать
+Редактировать
+1
+Phone
+599.99
+2
+2
+Expected Output:
 
-ShoppingCart.java - Cart management class
+pgsql
+Копировать
+Редактировать
+Product added to cart.
 
-OnlineShoppingCart.java - Main application with CLI
+--- Your Cart ---
+1. Phone - $599.99 x 2 (Total: $1199.98)
+Total: $1199.98
+🔹 Test Case 2: Update Quantity
+Input:
 
-Sample Test Cases
-Adding items:
+Копировать
+Редактировать
+3
+1
+3
+Expected Output:
 
-Input: "Milk", 2.5, 3
+mathematica
+Копировать
+Редактировать
+Quantity updated.
+🔹 Test Case 3: Remove Item
+Input:
 
-Expected: Item appears in cart with correct total (7.5)
+Копировать
+Редактировать
+4
+1
+Expected Output:
 
-Updating quantity:
+csharp
+Копировать
+Редактировать
+Product removed from cart.
+🔹 Test Case 4: View Empty Cart
+Input:
 
-Change quantity from 3 to 5
+Копировать
+Редактировать
+2
+Expected Output:
 
-Expected: Item total updates to 12.5
+csharp
+Копировать
+Редактировать
+Cart is empty.
+💾 Files (5 points)
+OnlineShoppingCart.java — Main file containing all classes and logic.
 
-Removing items:
+Currently, the program operates entirely through console I/O.
 
-Remove item #1
+Can be extended to use files for saving/loading cart data.
 
-Expected: Item disappears from cart
+ Code (10 points)
+✅ Valid: The code compiles and runs without errors.
 
-Screenshots
-[Sample program output would be shown here]
+✅ Clean: Code is organized into logical classes and methods.
 
-Future Enhancements
-File persistence for cart data
+✅ No Comments: Code is mostly self-explanatory and minimal commenting is used.
 
-Export/import cart functionality
+📸 Screenshots
+![image](https://github.com/user-attachments/assets/679ff775-d299-4626-85d4-0aba0a2c940d)
 
-Additional product attributes (category, description)
+![image](https://github.com/user-attachments/assets/0fb80f3e-d850-4b97-a1ac-4ccdace17681)
 
-Graphical user interface version
+Product added
 
-Evaluation Criteria Met
-✓ CRUD operations implemented
+Cart viewed
 
-✓ Command line interface
+Quantity updated
 
-✓ Basic input validation
+Product removed
 
-✓ Modular design
+Cart empty message
 
-✓ Clear documentation
+Exit confirmation
 
-Bonus Features Potential
-File-based data persistence
-
-CSV/JSON export-import
-
-Simple GUI version
