@@ -1,131 +1,154 @@
-#  Online Shopping Cart  
+# 🛒 Online Shopping Cart
 
-**Author**: [Алмасбеков Урмат]  
-
-## Description  
-**Online Shopping Cart** is a console-based Java application that simulates an online shopping experience. Users can:  
-- Add products to a cart  
-- View cart contents  
-- Update product quantities  
-- Remove products  
-
-The project demonstrates **object-oriented programming (OOP)** principles and basic data handling through user input and structured output.  
+**Student:** Алмасбеков Урмат  
+**Language:** Java (Console-based)
 
 ---
 
-## Objectives  
-- Create a functional shopping cart using Java.  
-- Implement **OOP concepts** (encapsulation, composition).  
-- Manage products dynamically using **data structures**.  
-- Provide a **user-friendly** console interface.  
-- Validate and handle user input effectively.  
+## 📄 Description
+
+**Online Shopping Cart** is a console-based Java application that simulates a basic e-commerce experience. Users can add products, manage their cart, and update or remove items. This project demonstrates fundamental object-oriented programming (OOP) concepts and dynamic data handling.
 
 ---
 
-## Project Requirements  
-1. Add products to the cart.  
-2. View the cart and list all products.  
-3. Display the **total price** of items in the cart.  
-4. Update the quantity of a selected product.  
-5. Remove a product from the cart.  
-6. Handle **empty cart** scenarios.  
-7. Provide a **menu-driven** user interface.  
-8. Prevent invalid inputs or actions.  
-9. Use **`ArrayList`** for dynamic storage.  
-10. Utilize **OOP concepts** (`Product`, `ShoppingCart` classes).  
+## 🎯 Objectives
+
+- Create a functional shopping cart system using Java  
+- Implement OOP principles (encapsulation, composition)  
+- Manage cart contents dynamically with `ArrayList`  
+- Provide a user-friendly, menu-driven console interface  
+- Ensure validation and safe handling of user inputs  
 
 ---
 
-##  Documentation  
+## ✅ Project Requirements
 
-###  Key Classes & Methods  
-| Class          | Methods & Description |
-|----------------|-----------------------|
-| **`Product`**  | Represents a product with `name`, `price`, and `quantity`. |
-| **`ShoppingCart`** | Manages cart operations: <br> • `addItem(Product product)` <br> • `viewCart()` <br> • `updateItem(int index, int newQuantity)` <br> • `removeItem(int index)` |
-| **`OnlineShoppingCart`** (Main) | Handles user interactions via `Scanner`. |
-
-###  Data Structures  
-- **`ArrayList<Product>`** – Stores and manages products dynamically.  
-
-###  Challenges Faced  
-- Converting **1-based user input** to **0-based indexing** in the code.  
-- Ensuring **input validation** for a smooth user experience.  
-- Keeping the interface **clear and intuitive**.  
+1. Add products to the cart  
+2. View cart and display all items  
+3. Show total price of all products  
+4. Update product quantity  
+5. Remove product from cart  
+6. Handle empty cart scenarios  
+7. Provide a clear menu interface  
+8. Validate user input and actions  
+9. Use `ArrayList` for dynamic product storage  
+10. Apply object-oriented design (`Product`, `ShoppingCart` classes)  
 
 ---
 
-## Test Cases & Outputs  
+## 📚 Documentation
 
-###  Test Case 1: Add and View Cart  
-**Input:**  
-Phone
-599.99
-2
-2
-**Expected Output:**  
+### 🔑 Key Classes & Methods
+
+- **`Product`**  
+  Represents a product with:
+  - `name`
+  - `price`
+  - `quantity`
+
+- **`ShoppingCart`**  
+  Manages cart operations:
+  - `addItem(Product product)`
+  - `viewCart()`
+  - `updateItem(int index, int newQuantity)`
+  - `removeItem(int index)`
+
+- **`OnlineShoppingCart`**  
+  Main class that handles the menu and user interaction via `Scanner`.
+
+### 🧮 Data Structures
+
+- `ArrayList<Product>` is used to store and manage the products in the cart.
+
+### ⚠️ Challenges Faced
+
+- Adjusting user inputs from 1-based to 0-based indexing  
+- Validating inputs to prevent errors  
+- Designing a clear interface for console use  
+
+---
+
+## 🧪 Test Cases
+
+### 🔹 Add and View Cart
+
+**Input:**
+1 Phone 599.99 2 2
+
+**Output:**
+
 Product added to cart.
 
 --- Your Cart ---
 
-Phone - 
-599.99
-x
-2
-(
-T
-o
-t
-a
-l
-:
-599.99x2(Total:1199.98)
-Total: $1199.98
+Phone - $599.99 x 2 (Total: $1199.98) Total: $1199.98
 
-###  Test Case 2: Update Quantity  
-**Input:**  
-3
-1
-3
-**Expected Output:**  
+---
+
+### 🔹 Update Quantity
+
+**Input:**
+
+3 1 3
+
+**Output:**
+
 Quantity updated.
 
-###  Test Case 3: Remove Item  
-**Input:**  
-4
-1
-**Expected Output:**  
+---
+
+### 🔹 Remove Item
+
+**Input:**
+4 1
+
+**Output:**
+
 Product removed from cart.
 
-###  Test Case 4: View Empty Cart  
-**Input:**  
+---
+
+### 🔹 View Empty Cart
+
+**Input:**
 2
-**Expected Output:**  
-Cart is empty.
+
+**Output:**
+Cart is empty
 
 ---
 
-## Files  
-- **`OnlineShoppingCart.java`** – Main file containing all classes and logic.  
-- *(Future extension: File storage for saving/loading cart data.)*  
+## 💾 Files
+
+- `OnlineShoppingCart.java` — Main file containing all logic and classes  
+- Current version uses console I/O only  
+- Can be extended to save/load cart data using files  
 
 ---
 
-##  Screenshots  
+## 💻 Code Quality
 
-| Action | Screenshot |
-|--------|------------|
-| **Product Added** | ![Add Product](https://github.com/user-attachments/assets/...) |
-| **Cart Viewed** | ![View Cart](https://github.com/user-attachments/assets/...) |
-| **Quantity Updated** | ![Update Quantity](https://github.com/user-attachments/assets/...) |
-| **Product Removed** | ![Remove Product](https://github.com/user-attachments/assets/...) |
-| **Empty Cart Message** | ![Empty Cart](https://github.com/user-attachments/assets/...) |
+- ✅ **Valid:** Compiles and runs without errors  
+- ✅ **Clean:** Organized with clear class structure  
+- ✅ **Minimal Comments:** Code is self-explanatory with minimal commentary  
 
 ---
 
-##  Code Quality  
-✔ **Valid** – Compiles and runs without errors.  
-✔ **Clean** – Well-organized into classes/methods.  
-✔ **Minimal Comments** – Self-explanatory code.  
+## 📸 Screenshots
+
+> _Demonstration of all required functionalities:_
+
+![Add Product](https://github.com/user-attachments/assets/679ff775-d299-4626-85d4-0aba0a2c940d)  
+![View Cart](https://github.com/user-attachments/assets/0fb80f3e-d850-4b97-a1ac-4ccdace17681)
+
+- 🟢 Product added  
+- 🟢 Cart viewed  
+- 🟢 Quantity updated  
+- 🟢 Product removed  
+- 🟢 Empty cart message  
+- 🟢 Exit confirmation  
 
 ---
+
+🛠️ _This project is a part of Java coursework, demonstrating practical implementation of basic OOP principles and dynamic data handling._
+
